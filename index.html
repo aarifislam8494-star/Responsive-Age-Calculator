@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register & Login System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="register-page" class="container">
+        <h2>Register</h2>
+        <input type="text" id="reg-user" placeholder="Email Address">
+        <input type="password" id="reg-pass" placeholder="Password">
+        <button onclick="register()">Register</button>
+        <p>Have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+
+    <div id="login-page" class="container hidden">
+        <h2>Login</h2>
+        <input type="text" id="login-user" placeholder="Your Email">
+        <input type="password" id="login-pass" placeholder="Your password">
+        <button onclick="login()">Login</button>
+        <p>Dont have an account? <a href="#" onclick="showRegister()">Register Now</a></p>
+    </div>
+
+    <div id="main-site" class="hidden">
+        <nav class="navbar">
+            <button onclick="showSection('home')">Home</button>
+            <button onclick="showSection('about')">About</button>
+            <button onclick="showSection('contact')">Contact</button>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </nav>
+
+        <section id="home" class="content-section">
+            <h1>Age Calculator</h1>
+            <div class="calculator-box">
+                <input type="date" id="birthdate">
+                <button onclick="calculateAge()">Age Calculator</button>
+                <h3 id="result"></h3>
+            </div>
+        </section>
+
+        <section id="about" class="content-section hidden">
+            <h1>About Us</h1>
+            <p></p>
+        </section>
+
+        <section id="contact" class="content-section hidden">
+            <h1>Contact</h1>
+            <p></p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
