@@ -20,10 +20,10 @@ body {
 }
 
 
-.hidden { 
+/* .hidden { 
     display: none; 
     
-}
+} */
 
 
 .navbar { 
@@ -37,8 +37,9 @@ body {
 }
 
 .navbar button { 
-    background: #3b45d4; 
-    color: black; 
+    /* background: #3b45d4;  */
+    background: green;
+    color: white; 
     border: none; 
     padding: 10px 20px; 
     margin: 5px; 
@@ -101,13 +102,15 @@ p a {
 /* responsive */
 @media (max-width: 600px) {
     .navbar {
-        flex-direction: column; 
+        flex-direction: column;
+        max-width: 100%;
+         
     }
     .navbar button {
-        width: 90%;
+        width: 100%;
     }
     .container {
         margin: 40px auto;
-        width: 85%;
+        width: 100%;
     }
 } 
